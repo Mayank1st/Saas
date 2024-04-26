@@ -1,0 +1,105 @@
+// Variables
+$navbar-background: white;
+$navbar-text-color: red;
+$navbar-height: 60px;
+$navbar-padding: 10px;
+$navbar-icon-size: 30px;
+
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+// Mixin for navbar
+@mixin navbar {
+    background-color: $navbar-background;
+    color: $navbar-text-color;
+    height: $navbar-height;
+    padding: $navbar-padding;
+    display: flex;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+%brand-logo {
+    margin-right: auto;
+}
+
+%navbar-icons {
+    margin-left: auto;
+    padding: 10px;
+}
+
+.navbar {
+    @include navbar;
+}
+
+.brand-logo {
+    @extend %brand-logo;
+}
+
+.navbar-icons {
+    @extend %navbar-icons;
+    display: flex;
+    gap: 20px;
+}
+
+.icon {
+    font-size: $navbar-icon-size;
+    margin-left: 10px;
+}
+
+.navbar-content {
+    display: flex;
+    gap: 20px;
+}
+
+// Variables
+$footer-background: #333;
+$footer-text-color: #fff;
+$footer-height: 120px;
+$footer-padding: 20px;
+
+// Mixin for footer
+@mixin footer {
+    background-color: $footer-background;
+    color: $footer-text-color;
+    height: $footer-height;
+    padding: $footer-padding;
+    display: flex;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    flex-direction: column; // Adjusted to column layout
+}
+
+.footer {
+    @include footer;
+    justify-content: center; // Center align content horizontally
+}
+
+.footer-content {
+    display: flex;
+    gap: 250px;
+    margin-bottom: 20px;
+}
+
+.footer-content a {
+    color: $footer-text-color; // Set link color to match footer text color
+    text-decoration: none; // Remove underline from links
+}
+
+.footer-content a:hover {
+    text-decoration: underline; // Add underline on hover
+}
+
+.footer-social {
+    display: flex;
+    gap: 10px;
+}
+
+.footer-copyright {
+    margin-top: auto; // Push content to the bottom
+}

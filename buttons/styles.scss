@@ -1,0 +1,15 @@
+$bg_color:#f0f0f0;
+$text_color:#333;   
+
+@mixin button1( $bg_color,$text_color) {
+    padding: 10px 20px;
+    border: 1px solid;
+    background-color: $bg_color;
+    color: $text_color;
+}
+
+button{
+     @include button1(#007bff ,#fff)
+    
+}
+

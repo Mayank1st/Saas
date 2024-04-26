@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar Example</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your compiled CSS file -->
+</head>
+<style>
+    .banner {
+        margin-top: 10px;
+        border: solid black 2px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: "a a b";
+        height: 70vh;
+
+    }
+
+    .banner>div {
+        border: solid red;
+    }
+
+    .banner>div:nth-of-type(1) {
+        grid-area: a;
+
+    }
+
+    .banner>div:nth-of-type(1)>img {
+        width: 100%;
+        height: 70vh;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .banner>div:nth-of-type(2) {
+        grid-area: b;
+        background-color: #dc4348;
+    }
+    .content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 30%;
+        font-family: Arial, Helvetica, sans-serif;
+        color: white;
+    }
+    .content>h2{
+        font-size: 40px;
+    }
+    .content>h4{
+        font-size: 15px;
+    }
+    .content>button{
+        padding: 10px;
+        border-radius: 20px;
+        border: none;
+    }
+    .h>a{
+        display: flex;
+        flex-direction: column;
+    }
+</style>
+
+<body>
+
+    <nav class="navbar">
+        <div class="brand-logo">
+            <img src="https://www.cafecoffeeday.com/sites/all/themes/ccd/assets/images/common/logo.png"
+                alt="Brand Logo">
+        </div>
+        <div class="navbar-content">
+            <span>Cafe Menu</span>
+            <span>E-Shop</span>
+            <span>Order Online</span>
+            <span>Cafe Finder/Cafe Locator</span>
+            <span>Mobile App/CCD Mobile App</span>
+        </div>
+        <div class="navbar-icons">
+            <i class="fa-solid fa-magnifying-glass" style="color: #e71d1d;"></i>
+            <i class="fa-solid fa-bell " style="color: #ff0000;"></i>
+        </div>
+    </nav>
+
+    <div class="banner">
+        <div>
+            <img src="https://www.cafecoffeeday.com/sites/all/themes/ccd/assets/images/store-locator/storelocator-desktop.jpg"
+                alt="">
+        </div>
+        <div>
+            <div class="content">
+                <h2>Store Selector</h2>
+                <h4>Cafe Coffee Day has 900+ outlets around india</h4>
+                <button>FIND A CAFFE NEAR YOU</button>
+                <h5>Loacation Required</h5>
+            </div>
+           
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-nav">
+                <h3 class="h">Quick Links</h3>
+                <a href="#">Cafe Menu</a>
+                <a href="#">Cafe Finder/Cafe Locator</a>
+                <a href="#">Customer Care</a>
+            </div>
+            <div class="footer-social">
+                <h3 class="h">Cafe Menu</h3>
+                <a href="#">Food For Mood</a>
+                <a href="#">Hot Classis</a>
+                <a href="#">All Time Chiller</a>
+            </div>
+            <div class="footer-contact">
+                <h3 class="h">Shop</h3>
+                <a href="#">Cafe Menu</a>
+                <a href="#">Cafe Finder/Cafe Locator</a>
+                <a href="#">Customer Care</a>
+                
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p>&copy; 2024 Your Company Name. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+
+    <!-- Your other HTML content goes here -->
+    <script src="https://kit.fontawesome.com/a89a1bd747.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
